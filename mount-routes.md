@@ -1,47 +1,49 @@
 
 # mount routes
 
-   app.get('/', function (req, res) {
+## Main page
+
+ * app.get('/', function (req, res) {
      console.log('index route is working)
       res.redirect('/fruits');
 
-* Index- GET /fruits
+## Index- GET /fruits
 
-   app.get('/fruits', function (req, res) {
+   * app.get('/fruits', function (req, res) {
      res.render('index.ejs', {
        Fruits: fruits
   });
 
-* New- GEt/fruits/new - send the user to a new page 
+## New- GEt/fruits/new - send the user to a new page 
 
-  app.get('/fruits/new', function (req, res) {
+  * app.get('/fruits/new', function (req, res) {
        Res.render('new.ejs');
  });
 
-* Delete- 
+## Delete- 
 
-  app.delete('/pokemon/:indexOfFruitsArray', function (req, res) {
+  * app.delete('/pokemon/:indexOfFruitsArray', function (req, res) {
     fruits.splice(req.params.indexOfFruitsArray, 1);
     res.redirect('/fruits');
 });
  
-* Update-
+## Update-
 
-  app.put('/fruits/:indexOfFruitsArray', function (req, res) {
+ * app.put('/fruits/:indexOfFruitsArray', function (req, res) {
     fruits[req.params.indexOfFruitsArray] = req.body;
     res.redirect('/fruits');
 });
 
-* Create- POST /fruits - take form data and create a new route with it
+## Create- POST /fruits - take form data and create a new route with it
 
-  app.post('/fruits', function (req, res) {
+ * app.post('/fruits', function (req, res) {
     fruits.push(req.body);
     res.redirect('/fruits');
 });
 
-* Edit- GET request /fruits/:indexOfArray/edit - sending a page that allow to edit the fruit
+## Edit- GET request /fruits/:indexOfArray/edit - sending a page that allow to edit the fruit
 
-  app.get('/fruits/:indexOfFruitsArray/edit', (req, res) => {
+  * app.get('/fruits/:indexOfFruitsArray/edit', (req, res) => {
     res.render(
         'edit.ejs', {
             fruit: fruits[req.params.indexOfFruitsArray],
