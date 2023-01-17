@@ -8,7 +8,7 @@
 * npm init -y (install express)
 * npm i express
 * git init
-* git remote add origin http://git.urlforremote.git
+* git remote add origin https://github.com/alychavez12/express-new-routes.git
 * git add -A
 * git commit -m 'wip: adds file system'
 * git push origin master
