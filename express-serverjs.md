@@ -34,17 +34,6 @@
 * in views folder: touch index.ejs show.ejs edit.ejs
 * in terminal: npm i ejs (pluging model)
 
-## CSS
-
- * in server.js app.use(express.static('public));
-
- * mkdir folder: public
-  - mkdir CSS
-   - touch style.css
-  - mkdir img
-  - mkdir js
-   - touch script.js
-
 3. Configure Settings in server.js
 
 * require('dotenv').config();
@@ -60,4 +49,14 @@
 
 6. Mount Routes (INDUCES).
 
+## CSS
+
+ * in server.js app.use(express.static('public));
+
+ * mkdir folder: public
+  - mkdir CSS
+   - touch style.css
+  - mkdir img
+  - mkdir js
+   - touch script.js
 
